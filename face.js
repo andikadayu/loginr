@@ -53,6 +53,14 @@ function takeSnapshot() {
 
 
     video.src = "";
+
+    add_data();
+
+    scanning();
+
+}
+
+function add_data() {
     var ids = Math.floor(Math.random() * 100000);
 
     var today = new Date();
@@ -67,9 +75,6 @@ function takeSnapshot() {
         orang: orang,
         tanggal: tanggal
     });
-
-    scanning();
-
 }
 
 function scanning() {
