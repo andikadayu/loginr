@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCr7z5AAWEghlYwsw5F3mAvS-NTOtvRlsw"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBm8JCDy1ZzkX0q4gqtkWZl1Bl00rSzdkc",
+            authDomain: "loginqr-694d8.firebaseapp.com",
+            databaseURL: "https://loginqr-694d8-default-rtdb.firebaseio.com",
+            projectId: "loginqr-694d8",
+            storageBucket: "loginqr-694d8.appspot.com",
+            messagingSenderId: "88787059221",
+            appId: "1:88787059221:web:78bdf1e6679d5955d0441c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="face.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h2 id="logas"></h2>
+        <h2>Face Recognition</h2>
+
+        <div style="position: relative;">
+            <video id="video" width="50%" height="50%" autoplay muted></video>
+            <button onclick="takeSnapshot();">Take Snapshot</button>
+        </div>
+        <div id="mapholder"></div>
+        <div id="x"></div>
+    </div>
+
+</body>
+
+</html>
