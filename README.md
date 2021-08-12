@@ -1,1 +1,3 @@
-https://youtu.be/w_atJSJt9Gs
+## Information
+
+Login with QR and Face Recognition
